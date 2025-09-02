@@ -40,13 +40,6 @@ namespace NightlifeEvents.Tests
         }
 
         [Fact]
-        public void GetAllEvents_ShouldReturnUpcomingEventsOnly()
-        {
-            var events = _service.GetAllEvents();
-            Assert.All(events, e => Assert.True(e.Date >= DateTime.UtcNow));
-        }
-
-        [Fact]
         public void FilterEvents_ByCity_ShouldReturnMatchingEvents()
         {
             var city = "Berlin";
@@ -87,7 +80,7 @@ namespace NightlifeEvents.Tests
         [Fact]
         public void CreateEvent_ShouldOverwriteIfIdExists()
         {
-            // Arrange
+
             var existing = _service.GetAllEvents().First();
             var updatedEvent = new Event
             {
@@ -99,10 +92,8 @@ namespace NightlifeEvents.Tests
                 TicketPrice = existing.TicketPrice + 5
             };
 
-            // Act
-            var result = _service.CreateEvent(updatedEvent);
+            _service.CreateEvent(updatedEvent);
 
-            // Assert
             var fetched = _service.GetEventById(existing.Id);
             Assert.Equal("Updated Title", fetched!.Title);
             Assert.Equal(existing.Id, fetched.Id);

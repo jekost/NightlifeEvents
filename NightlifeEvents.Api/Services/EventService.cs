@@ -65,11 +65,8 @@ namespace NightlifeEvents.Services
                 newEvent.TicketPrice < 0)
             {
                 throw new ArgumentException(
-                    "An event must have a title, city, description, date, and a ticket price.");
+                    "An event must have a title, city, description, date, and a positive ticket price.");
             }
-
-            if (newEvent.TicketPrice < 0)
-                throw new ArgumentException("Ticket price can't be negative.");
 
             if (newEvent.Date < DateTime.UtcNow)
                 throw new ArgumentException("Event date cannot be in the past.");
