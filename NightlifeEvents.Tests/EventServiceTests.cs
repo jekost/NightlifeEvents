@@ -1,8 +1,5 @@
-using System;
-using System.Linq;
 using NightlifeEvents.Models;
 using NightlifeEvents.Services;
-using Xunit;
 
 namespace NightlifeEvents.Tests
 {

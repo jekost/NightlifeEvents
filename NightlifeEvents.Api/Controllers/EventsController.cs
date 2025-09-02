@@ -5,7 +5,7 @@ using NightlifeEvents.Services;
 namespace NightlifeEvents.Controllers
 {
     [ApiController]
-    [Route("api/")]
+    [Route("api/events")]
     public class EventsController : ControllerBase
     {
         private readonly IEventService _eventService;
@@ -15,7 +15,7 @@ namespace NightlifeEvents.Controllers
             _eventService = eventService;
         }
 
-        [HttpPost("createEvent")]
+        [HttpPost("create")]
         public ActionResult<Event> CreateEvent(Event newEvent)
         {
             try
@@ -29,7 +29,7 @@ namespace NightlifeEvents.Controllers
             }
         }
 
-        [HttpGet("events")]
+        [HttpGet]
         public ActionResult<IEnumerable<Event>> GetAllEvents() =>
             Ok(_eventService.GetAllEvents());
 
