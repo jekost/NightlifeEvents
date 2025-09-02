@@ -62,7 +62,7 @@ namespace NightlifeEvents.Services
                 string.IsNullOrWhiteSpace(newEvent.City) ||
                 string.IsNullOrWhiteSpace(newEvent.Description) ||
                 newEvent.Date == default ||
-                newEvent.TicketPrice == default) 
+                newEvent.TicketPrice < 0)
             {
                 throw new ArgumentException(
                     "An event must have a title, city, description, date, and a ticket price.");

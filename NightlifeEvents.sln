@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightlifeEvents.Tests", "NightlifeEvents.Tests\NightlifeEvents.Tests.csproj", "{918C619A-ED81-46A5-8B6A-C2607BF4E47A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightlifeEvents", "NightlifeEvents.Api\NightlifeEvents.csproj", "{2776445D-F87E-42A5-81AA-ECB47C587197}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{918C619A-ED81-46A5-8B6A-C2607BF4E47A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918C619A-ED81-46A5-8B6A-C2607BF4E47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918C619A-ED81-46A5-8B6A-C2607BF4E47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918C619A-ED81-46A5-8B6A-C2607BF4E47A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2776445D-F87E-42A5-81AA-ECB47C587197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2776445D-F87E-42A5-81AA-ECB47C587197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2776445D-F87E-42A5-81AA-ECB47C587197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2776445D-F87E-42A5-81AA-ECB47C587197}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
