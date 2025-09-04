@@ -14,7 +14,7 @@ namespace NightlifeEvents.Services
                 Title = "Berlin Night Party",
                 City = "Berlin",
                 Description = "Techno night in Berlin.",
-                Date = DateTime.UtcNow.AddDays(2),
+                Date = new DateTime(2025, 12, 5, 13, 0, 0),
                 TicketPrice = 25
             });
 
@@ -50,8 +50,8 @@ namespace NightlifeEvents.Services
                 Title = "Oktoberfest",
                 City = "München",
                 Description = "Bier, Schnitzel und Lederhosen.",
-                Date = new DateTime(2025, 9, 20, 13, 0, 0),
-                TicketPrice = 40
+                Date = new DateTime(2025, 12, 20, 13, 0, 0),
+                TicketPrice = 80
             });
         }
 
@@ -71,12 +71,9 @@ namespace NightlifeEvents.Services
             if (newEvent.Date < DateTime.UtcNow)
                 throw new ArgumentException("Event date cannot be in the past.");
 
-
-            // Check if an event with the same ID already exists
             var existingEvent = _events.FirstOrDefault(e => e.Id == newEvent.Id);
             if (existingEvent != null)
             {
-                // Overwrite the existing event
                 existingEvent.Title = newEvent.Title;
                 existingEvent.City = newEvent.City;
                 existingEvent.Description = newEvent.Description;
@@ -85,7 +82,6 @@ namespace NightlifeEvents.Services
             }
             else
             {
-                // Assign a new ID and add to the list
                 newEvent.Id = _nextId++;
                 _events.Add(newEvent);
             }

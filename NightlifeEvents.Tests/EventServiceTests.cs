@@ -34,7 +34,7 @@ namespace NightlifeEvents.Tests
         [Fact]
         public void CreateEvent_ShouldThrowIfInvalid()
         {
-            var invalidEvent = new Event(); // missing all fields
+            var invalidEvent = new Event();
 
             Assert.Throws<ArgumentException>(() => _service.CreateEvent(invalidEvent));
         }
