@@ -14,7 +14,7 @@ namespace NightlifeEvents.Services
                 Title = "Berlin Night Party",
                 City = "Berlin",
                 Description = "Techno night in Berlin.",
-                Date = new DateTime(2025, 12, 5, 13, 0, 0),
+                Date = DateTime.UtcNow.AddDays(20),
                 TicketPrice = 25
             });
 
@@ -50,7 +50,7 @@ namespace NightlifeEvents.Services
                 Title = "Oktoberfest",
                 City = "München",
                 Description = "Bier, Schnitzel und Lederhosen.",
-                Date = new DateTime(2025, 12, 20, 13, 0, 0),
+                Date = DateTime.UtcNow.AddDays(100),
                 TicketPrice = 80
             });
         }
