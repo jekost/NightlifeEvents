@@ -10,7 +10,7 @@
 
 The project provides a simple in-memory API for managing nightlife events. You can create, view, and filter events and explore the API with Swagger.
 
-## Setup guide using .NET 8
+## Setup guide using .NET 8 (SDK 8.0.413)
 
 ### Clone & enter the repository
 - ```git clone https://github.com/jekost/NightlifeEvents```
